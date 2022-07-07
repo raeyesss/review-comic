@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 Comics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --darkblue: #212d53;
+            --offwhite: #f0f0f0;
+            --darkgray: #414141;
+        }
+
+        body{
+            background-color: var(--darkblue);
+            width: 100%;
+            height: 100%;
+
+            margin: 0;
+        }
+
+        .instructions{
+            width: 800px;
+            margin:3.5% auto 0 auto;
+        }
+
+        .instructions p{
+            color: var(--offwhite);
+            font-family: 'Comic Neue', cursive;
+            font-size: 24px;
+
+            text-align: center;
+        }
+
+        .container{
+            width: 500px;
+            height: 781px;
+            margin: auto;
+            padding-top: 2.5%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .comics{
+            width: 500px;
+            height: 781px;
+            margin: 0;
+
+            position: absolute;
+        }
+
+        .texts{
+            width: 500px;
+            height: 781px;
+            margin: 0;
+
+            position: absolute;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+
+        .title{
+            color: var(--darkblue);
+            font-family: 'Comic Neue', cursive;
+            font-size: 24px;
+
+            margin: 3px 0 0 15px;
+        }
+
+        .time{
+            color: var(--darkgray);
+            font-family: 'Comic Neue', cursive;
+            font-size: 26px;
+
+            margin: 5px 0 auto 25px;
+        }
+
+        .name{
+            color: var(--darkblue);
+            font-family: 'Comic Neue', cursive;
+            font-size: 18px;
+            margin: auto 15px 5px auto;
+        }
+
+
+        /* SPEECH BUBBLES & CLOUDS BUTTON */
+
+            .counter{
+                width: 500px;
+                height: 781px;
+                margin: auto;
+
+                display: flex;
+
+                position: absolute;
+            }
+
+            .circle{
+                background-color: var(--offwhite);
+                width: 50px;
+                height: 50px;
+
+                border-radius: 50%;
+                border-color: var(--darkgray);
+                border-style: solid;
+                border-width: 1px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                color: var(--darkgray);
+                font-family: 'Comic Neue', cursive;
+                font-size: 18px;
+            }
+
+            .count1{
+                margin-top: 85px;
+                margin-left: 45px;
+
+                position: absolute;
+            }
+
+            .count2{
+                margin-top: 65px;
+                margin-left: 160px;
+
+                position: absolute;
+            }
+
+            .count3{
+                margin-top: 55px;
+                margin-left: 300px;
+
+                position: absolute;
+            }
+
+            .count4{
+                margin-top: 300px;
+                margin-left: 155px;
+
+                position: absolute;
+            }
+
+            .count5{
+                margin-top: 420px;
+                margin-left: 35px;
+
+                position: absolute;
+            }
+
+            .count6{
+                margin-top: 285px;
+                margin-left: 340px;
+
+                position: absolute;
+            }
+
+            .count7{
+                margin-top: 540px;
+                margin-left: 100px;
+
+                position: absolute;
+            }
+
+            .count8{
+                margin-top: 620px;
+                margin-left: 100px;
+
+                position: absolute;
+            }
+
+            .count9{
+                margin-top: 690px;
+                margin-left: 100px;
+
+                position: absolute;
+            }
+
+            .count10{
+                margin-top: 552.5px;
+                margin-left: 345px;
+
+                position: absolute;
+            }
+
+    </style>
+
+    <script>
+        var ptElements;
+        var defautPtElements = 'Hydrogen, Helium, Lithium';
+
+        function changeBgColor(obj, colorName) {
+            obj.style.backgroundColor = colorName;
+        }
+
+        function changeColor(obj, colorName) {
+            obj.style.color = colorName;
+        }
+
+        function showText1(){
+            ptElements = prompt('Input 3 elements in the Periodic Table \n[ex. Hydrogen, Helium, Lithium]') ;
+
+            switch (ptElements){
+                case null: ptElements = defautPtElements;
+                    break;
+
+                case '': ptElements = defautPtElements;
+                    break;
+            }
+
+            alert("Sam: " + ptElements + "...");
+        }
+
+        function showText2(){
+            alert('Sam\'s thoughts: I need to remember all these elements or else I\'ll fail the Chemistry test later!')
+        }
+
+        function showText3(){
+            alert('Sam\'s thoughts: I wonder if Mike could help me if I would call him...')
+        }
+
+        function showText4(){
+            alert('Mike: "Hey, Sam! What\'s up?"')
+        }
+
+        function showText5(){
+            alert('Sam: "Hi Mike! Have you reviewed for the Chemistry test later?"')
+        }
+
+        function showText6(){
+            alert('Mike: "WE HAVE A TEST LATER?!?"')
+        }
+
+        function showText7(){
+            alert('Sam: "You didn\'t know? Yes, we do! I think if we\'d memorize some elements in the Periodic Table, it could help us pass."')
+        }
+
+        function showText8(){
+            alert('Mike: "Alright! I\'ll start reviewing now. Thanks a lot, Sam!"')
+        }
+
+        function showText9(){
+            alert('Sam: "No problem, mate! Good luck!"')
+        }
+
+        function showText10(){
+            alert('Sam\'s thoughts: Why did I end up being the one who gave help?')
+        }
+    </script>
+</head>
+<body>
+    <div class="instructions"><p>Click the numbers to input and read the characters' speeches and thoughts.</p></div>
+
+    <div class="container">
+        <img class="comics" src="images/comic_main.png">
+
+        <div class="texts">
+            <h1 class="title">REVIEW</h1>
+            <h1 class="time">*2:00 A.M.*</h1>
+            <h1 class="name">MARIELLE RAE CAYABYAB | ODMA1</h1>
+        </div>
+
+        <div class="counter">
+            <div onclick="showText1()" class="count1"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">1</div>
+            </div>
+
+            <div onclick="showText2()" class="count2"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">2</div>
+            </div>
+
+            <div onclick="showText3()" class="count3"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">3</div>
+            </div>
+
+            <div onclick="showText4()" class="count4"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">4</div>
+            </div>
+
+            <div onclick="showText5()" class="count5"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">5</div>
+            </div>
+
+            <div onclick="showText6()" class="count6"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">6</div>
+            </div>
+
+            <div onclick="showText7()" class="count7"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">7</div>
+            </div>
+
+            <div onclick="showText8()" class="count8"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">8</div>
+            </div>
+
+            <div onclick="showText9()" class="count9"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">9</div>
+            </div>
+
+            <div onclick="showText10()" class="count10"><div onmouseover="changeBgColor(this, '#414141'), changeColor(this, '#f0f0f0')" onmouseleave="changeBgColor(this, '#f0f0f0'), changeColor(this, '#414141')" class="circle">10</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+</html>
